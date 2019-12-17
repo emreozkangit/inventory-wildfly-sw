@@ -7,6 +7,7 @@ pipeline {
       steps {
         sh "mvn package"
         stash name:"jar", includes:"target/inventory-1.0-SNAPSHOT-swarm.jar"
+        
       }
     }
     stage('Build Image') {
